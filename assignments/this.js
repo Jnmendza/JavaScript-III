@@ -23,15 +23,22 @@ const prey = 'deer';
 // Principle 2
 // code example for Implicit Binding
 
-const person = {
+const person1 = {
     name: 'Jim',
     greeting: 'Whats up my name is ',
     words: function(){
-        return `${this.greeting} ${this.name}`
+        return `${this.greeting} ${this.name} whats yours?`
     }
 }
 console.log(person.words());
 
+const person2 = {
+    name: 'James',
+    greeting: 'Hello! ',
+    words: function(){
+        return `${this.greeting} I'm ${this.name}`
+    }
+}
 
 // Principle 3
 // code example for New Binding
@@ -47,7 +54,7 @@ console.log (`My favorite sport is ${myFavSport.game}.`);
 // Principle 4
 // code example for Explicit Binding
 // .call
-function tiger(){
+function Tiger(){
     console.log(this.food);
 }
 
@@ -56,7 +63,7 @@ let myTiger = {
     food: 'Korn Flakes'
 }
 
-tiger.call(myTiger);
+Tiger.call(myTiger);
 
 // .bind
 function tiger(){
